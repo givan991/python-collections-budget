@@ -16,7 +16,7 @@ def main():
             print('Sets are NOT equal by subset test')
 
     print(
-    timeit.timeit(stmt="expenses.categorize_for_loop",
+    timeit.timeit(stmt="expenses.categorize_for_loop()",
     setup=
     '''
 from . import Expense
@@ -28,7 +28,7 @@ expenses.read_expenses('data/spending_data.csv')
     )
 
     print(
-    timeit.timeit(stmt="expenses.categorize_set_comprehension",
+    timeit.timeit(stmt="expenses.categorize_set_comprehension()",
     setup=
     '''
 from . import Expense
